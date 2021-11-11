@@ -1,2 +1,2 @@
-github_token = "INSERT GITHUB TOKEN HERE"
+github_token = "Test"
 secret_key = "INSERT SECRET KEY HERE"
