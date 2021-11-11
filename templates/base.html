@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/base.css')}}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <title>Finn Kliewer</title>
+  </head>
+  <body>
+    <div>
+      <div id="header">
+        <ul>
+          <li> <a id="home" href="{{ url_for('views.home') }}">Home</a> </li>
+          <li> <a id="photog" href="{{ url_for('views.photog') }}">Photography</a> </li>
+          <li> <a id="github" href="{{ url_for('views.github') }}">Github</a> </li>
+          <li> <a id="artwork" href="{{ url_for('views.artwork') }}">Artwork</a> </li>
+          <li> <a id="contact" href="{{ url_for('views.contact') }}">Contact</a> </li>
+        </ul>
+      </div>
+    </div>
+    {% block content %}
+    {% endblock %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  </body>
+</html>

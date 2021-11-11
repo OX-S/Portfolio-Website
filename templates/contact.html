@@ -1,0 +1,74 @@
+<!doctype html>
+
+{% extends 'base.html'%}
+{% block title %}
+    Contact
+{% endblock %}
+{% block content %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/contact.css')}}">
+    <div class="contact">
+        <h1> Contact </h1>
+
+        <div class="float_container">
+
+            <div class="float_child">
+                <div id="info">
+
+                    <div class="container">
+                        <div class="circle">
+                            <img class="icon" src="{{ url_for('static', filename='assets/mobile.png')}}" width="20" height="20"/>
+                        </div>
+                        <div class="child">
+                            <h2>Phone</h2>
+                            <a href="tel:5554280940" rel="noopener noreferrer"> +1 (201) 747-2660</a>
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <div class="circle">
+                            <img class="icon" src="{{ url_for('static', filename='assets/email.png')}}" width="20" height="20"/>
+                        </div>
+                        <div class="child">
+                            <h2>Email</h2>
+                            <a href="mailto:finn.kliewer@gmail.com?subject=WEBSITE CONTACT" target="_blank" rel="noopener noreferrer"> finn.kliewer@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <div class="circle">
+                            <img class="icon" src="{{ url_for('static', filename='assets/insta.png')}}" width="20" height="20"/>
+                        </div>
+                        <div class="child">
+                            <h2>Instagram</h2>
+                            <a href="https://www.instagram.com/finn_kliewer/" target="_blank" rel="noopener noreferrer">@finn_kliewer</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="float_child">
+                <div class="contactForm">
+                    <form action="{{ url_for('views.contact') }}" method=post>
+                        <h2>Send Message</h2>
+                        <div class="inputBox">
+                            <input type="text" name="name" required="required">
+                            <span>Full Name</span>
+                        </div>
+                        <div class="inputBox">
+                            <input type="text" name="email" required="required">
+                            <span>Email</span>
+                        </div>
+                        <div class="inputBox">
+                            <input type="text" name="message" required="required">
+                            <span>Type your message...</span>
+                        </div>
+                        <div class="inputBox">
+                            <input type="submit" name="" value="Send">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

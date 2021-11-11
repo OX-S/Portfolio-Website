@@ -1,0 +1,53 @@
+<!doctype html>
+
+{% extends 'base.html'%}
+{% block title %}
+    Photography
+{% endblock %}
+{% block content %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/photog.css')}}">
+    <div class="photog">
+        <h1> My Photography </h1>
+         <div class="container">
+             <div class="row">
+                 <div class="column">
+                    <img src="{{ url_for('static', filename='assets/photographs/airplane.jpeg')}}">
+                    <img src="{{ url_for('static', filename='assets/photographs/beacj.jpeg')}}">
+                    <img src="{{ url_for('static', filename='assets/photographs/bird.jpeg')}}">
+                    <img src="{{ url_for('static', filename='assets/photographs/brooklyn.JPG')}}">
+                    <img src="{{ url_for('static', filename='assets/photographs/brooklyn2.JPG')}}">
+                    <img src="{{ url_for('static', filename='assets/photographs/BruceCanyon1-5.jpeg')}}">
+                    <img src="{{ url_for('static', filename='assets/photographs/Coffee.jpg')}}">
+                    <img src="{{ url_for('static', filename='assets/photographs/coinwater.jpeg')}}">
+                 </div>
+                 <div class="column">
+                     <img src="{{ url_for('static', filename='assets/photographs/elbwindow.jpeg')}}"
+                    <img src="{{ url_for('static', filename='assets/photographs/fall.jpg')}}">
+                    <img src="{{ url_for('static', filename='assets/photographs/fishboat.jpeg')}}">
+                    <img src="{{ url_for('static', filename='assets/photographs/Greece1-2.jpg')}}">
+                    <img src="{{ url_for('static', filename='assets/photographs/Greece1-5.jpg')}}">
+                    <img src="{{ url_for('static', filename='assets/photographs/img-2.png')}}">
+                    <img src="{{ url_for('static', filename='assets/photographs/LibteryStatePark-3.jpg')}}">
+                    <img src="{{ url_for('static', filename='assets/photographs/lock.JPG')}}">
+                    <img src="{{ url_for('static', filename='assets/photographs/nyc.jpeg')}}">
+                    <img src="{{ url_for('static', filename='assets/photographs/nycbeach.jpeg')}}">
+                 </div>
+                 <div class="column">
+                    <img src="{{ url_for('static', filename='assets/photographs/scale.jpeg')}}">
+                    <img src="{{ url_for('static', filename='assets/photographs/sign.JPG')}}">
+                    <img src="{{ url_for('static', filename='assets/photographs/sky.jpeg')}}">
+                    <img src="{{ url_for('static', filename='assets/photographs/spain.jpeg')}}">
+                    <img src="{{ url_for('static', filename='assets/photographs/squirrel.jpeg')}}">
+                    <img src="{{ url_for('static', filename='assets/photographs/stairs.jpeg')}}">
+                    <img src="{{ url_for('static', filename='assets/photographs/tree.jpeg')}}">
+                    <img src="{{ url_for('static', filename='assets/photographs/treehole.jpeg')}}">
+                    <img src="{{ url_for('static', filename='assets/photographs/PatersonFalls.jpg')}}">
+                    <img src="{{ url_for('static', filename='assets/photographs/DelwareWaterGap.jpg')}}">
+
+                 </div>
+             </div>
+
+        </div>
+    </div>
+{% endblock %}
+

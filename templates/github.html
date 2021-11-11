@@ -1,0 +1,45 @@
+<!doctype html>
+
+{% extends 'base.html'%}
+{% block title %}
+    Github
+{% endblock %}
+{% block content %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/github.css')}}">
+    <div class="github">
+         <div>
+             <h1>My Code</h1>
+             <div class="float_container">
+                 {% for item in data %}
+                 <div class="float_child" onClick="javascript:window.open('{{ item[0] }}');" style="cursor: pointer;">
+                     <div class="title">{{ item[1] }}</div>
+                     <div class="desc">
+                         <span class="descText">{{ item[2] }}</span>
+                     </div>
+                     <div class="stats">
+                         <span>
+                             <svg height="20" width="20" class="svg_code">
+                                 <path fill="black" d="M4.72 3.22a.75.75 0 011.06 1.06L2.06 8l3.72 3.72a.75.75 0 11-1.06 1.06L.47 8.53a.75.75 0 010-1.06l4.25-4.25zm6.56 0a.75.75 0 10-1.06 1.06L13.94 8l-3.72 3.72a.75.75 0 101.06 1.06l4.25-4.25a.75.75 0 000-1.06l-4.25-4.25z" ></path>
+                            </svg>
+                             {{ item[5] }}
+                         </span>
+                         <span>
+                             <svg height="20" width="20" class="git-branch">
+                                 <path fill="black" d="M11.75 2.5a.75.75 0 100 1.5.75.75 0 000-1.5zm-2.25.75a2.25 2.25 0 113 2.122V6A2.5 2.5 0 0110 8.5H6a1 1 0 00-1 1v1.128a2.251 2.251 0 11-1.5 0V5.372a2.25 2.25 0 111.5 0v1.836A2.492 2.492 0 016 7h4a1 1 0 001-1v-.628A2.25 2.25 0 019.5 3.25zM4.25 12a.75.75 0 100 1.5.75.75 0 000-1.5zM3.5 3.25a.75.75 0 111.5 0 .75.75 0 01-1.5 0z"></path>
+                             </svg>
+                             {{ item[4] }}
+                         </span>
+                         <span>
+                             <svg height="20" width="20" class="star">
+                                 <path fill="black" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z"></path>
+                             </svg>
+                             {{ item[3] }}
+                         </span>
+                     </div>
+                 </div>
+                 {% endfor %}
+             </div>
+        </div>
+    </div>
+{% endblock %}
+

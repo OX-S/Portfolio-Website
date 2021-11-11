@@ -1,0 +1,45 @@
+body {
+    background-color: #111214;
+}
+
+#header {
+  position: absolute
+  padding-right: 40em;
+  background-color: #151618;
+  height: 4em;
+}
+
+ul {
+    position: absolute
+    text-align: justify;
+}
+ul:after {
+    position: absolute
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+ul:before {
+    position: absolute
+    content: '';
+    display: block;
+    margin-top: -0.5em;
+}
+li {
+    margin: 0;
+    color: white;
+    display: inline-block;
+    margin-right: 1.5em;
+    padding: .75em ;
+    position: relative;
+    top: 50%;
+    font-size: 18px;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+a:hover {
+  color: white;
+  border-bottom: 1px solid currentColor;
+}
