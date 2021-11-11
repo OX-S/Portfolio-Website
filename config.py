@@ -1,0 +1,2 @@
+github_token = "INSERT GITHUB TOKEN HERE"
+secret_key = "INSERT SECRET KEY HERE"

@@ -1,11 +1,11 @@
 import requests
-
+from config import github_token
 
 class Github:
 
     @staticmethod
     def get_repo(owner, repo):
-        token = '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'
+        token = github_token
         params = {
             "state": "open",
         }
