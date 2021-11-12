@@ -11,7 +11,8 @@ views = Blueprint(__name__, "views")
 links = [("ArcticDevelopment", "ArcticTools"),
          ("OX-S", "Discord-Custom-Status-Changer"),
          ('OX-S', 'Python-Mandelbrot'),
-         ('ArcticDevelopment', 'ArcticDarkzone')]
+         ('ArcticDevelopment', 'ArcticDarkzone'),
+         ('OX-S', 'Portfolio-Website')]
 
 
 @views.route("/")
