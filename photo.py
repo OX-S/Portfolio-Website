@@ -28,7 +28,7 @@ class Photo:
             speed = exif_data[33434]
             if speed[0] / speed[1] >= 1:
                 ss = speed[0] / speed[1]
-                return str(ss)
+                return f'{str(ss)} s'
             else:
                 return f'{speed[0]}/{speed[1]} s'
         except (TypeError, KeyError) as e:
