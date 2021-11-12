@@ -5,6 +5,7 @@
     Photography
 {% endblock %}
 {% block content %}
+    <script type="text/javascript" src="{{ url_for('static', filename='js/photog.js')}}"></script>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/photog.css')}}">
     <div class="photog">
         <h1> My Photography </h1>
@@ -13,7 +14,7 @@
                  {% for list in data %}
                     <div class="column">
                        {% for item in list %}
-                        <img src="{{ url_for('static', filename=item[0])}}">
+                        <img src="{{ url_for('static', filename=item[0])}}" onclick="enlargeImg(this)">
                        {% endfor %}
                     </div>
                  {% endfor %}
