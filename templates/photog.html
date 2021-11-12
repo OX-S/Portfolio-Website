@@ -13,14 +13,18 @@
                  {% for list in data %}
                     <div class="column">
                        {% for item in list %}
-                        <img src="{{ url_for('static', filename=item[0])}}" onclick="enlargeImg(this)">
+                        <div class="container">
+                            <img src="{{ url_for('static', filename=item[0])}}" onclick="enlargeImg(this)">
+                            <div class="overlay">Retard</div>
+                        </div>
                        {% endfor %}
                     </div>
                  {% endfor %}
              </div>
             <div id="large" onclick="makeSmall()">
-                <img id="largeimg" src="https://wallpaperaccess.com/full/11731.jpg">
+
             </div>
+             <img id="largeimg" src="https://wallpaperaccess.com/full/11731.jpg">
         </div>
     </div>
     <script type="text/javascript" src="{{ url_for('static', filename='js/photog.js')}}"></script>
