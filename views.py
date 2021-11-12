@@ -40,7 +40,7 @@ def photog():
         data = (file.replace('static/', ''), name, device, ss, f_stop, iso, focal_length)
         photos.append(data)
 
-    lists = [photos[x:floor(len(photos)/3)] for x in range(0, len(photos), 100)]
+    lists = [photos[x:x + floor(len(photos)/3)] for x in range(0, len(photos), floor(len(photos)/3))]
     return render_template("photog.html", data=lists)
 
 

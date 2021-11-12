@@ -12,9 +12,8 @@
              <div class="row">
                  {% for list in data %}
                     <div class="column">
-                       {% for tuple in list %}
-                        <p>{{ tuple[0] }}</p>
-                        <img src="{{ url_for('static', filename='{{ tuple[0] }}')}}">
+                       {% for item in list %}
+                        <img src="{{ url_for('static', filename=item[0])}}">
                        {% endfor %}
                     </div>
                  {% endfor %}
