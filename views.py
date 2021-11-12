@@ -3,6 +3,7 @@ import os
 from github import Github
 from flask import Blueprint, render_template, url_for, redirect, request
 from forms import ContactForm
+from photo import *
 
 
 views = Blueprint(__name__, "views")
@@ -24,6 +25,8 @@ def home():
 
 @views.route("/photography")
 def photog():
+    photos = []
+
     return render_template("photog.html")
 
 
