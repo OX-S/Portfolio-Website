@@ -83,7 +83,6 @@ def contact():
             df = pd.DataFrame([[name, email, message]], columns=['a', 'b', 'c'])
             df.to_csv('data.csv')
 
-        print("The data is saved !")
         return render_template('contact.html', form=form)
     else:
         return render_template('contact.html', form=form)
