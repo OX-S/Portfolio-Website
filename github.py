@@ -1,5 +1,7 @@
 import requests
+
 from config import github_token
+
 
 class Github:
 
