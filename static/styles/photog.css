@@ -87,11 +87,17 @@ h1 {
 .overlay h2 {
   color: white;
   font-size: 20px;
-  padding: 10px;
+  padding: 5px;
   text-align: center;
 }
-.overlay span {
+.overlay .table {
+    margin-bottom: -5px;
+    display:table;
+    width:100%;
+}
+.overlay .table span {
     color: white;
     font-size: 12;
-    padding: 0px 25px 20px 20px;
+    display:table-cell;
+    text-align:center;
 }

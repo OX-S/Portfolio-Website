@@ -17,10 +17,13 @@
                             <img src="{{ url_for('static', filename=item[0])}}" onclick="enlargeImg(this)">
                             <div class="overlay">
                                 <h2> {{item[1] }} </h2>
-                                <span> {{ item[3] }}</span>
-                                <span> {{ item[4] }}</span>
-                                <span> {{ item[5] }}</span>
-                                <span>{{ item[6] }} </span>
+                                <div class="table">
+                                    <span> {{ item[3] }}</span>
+                                    <span> {{ item[4] }}</span>
+                                    <span> {{ item[5] }}</span>
+                                    <span>{{ item[6] }} </span>
+                                </div>
+
                             </div>
                         </div>
                        {% endfor %}

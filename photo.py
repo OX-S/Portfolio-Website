@@ -53,6 +53,6 @@ class Photo:
     @staticmethod
     def get_focal_length(exif_data):
         try:
-            return f'{str(exif_data[37386][0])} mm'
+            return f'{str(round(exif_data[37386][0]/exif_data[37386][1]))} mm'
         except (TypeError, KeyError) as e:
             return '-'
