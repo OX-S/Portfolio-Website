@@ -4,6 +4,7 @@ from github import Github
 from flask import Blueprint, render_template, url_for, redirect, request
 from forms import ContactForm
 from photo import *
+from math import floor
 
 
 views = Blueprint(__name__, "views")
@@ -36,9 +37,11 @@ def photog():
         f_stop = Photo.get_f_stop(exif)
         iso = Photo.get_iso(exif)
         focal_length = Photo.get_focal_length(exif)
-        data = (name, device, ss, f_stop, iso, focal_length)
+        data = (file.replace('static/', ''), name, device, ss, f_stop, iso, focal_length)
         photos.append(data)
-    return render_template("photog.html", data=photos)
+
+    lists = [photos[x:floor(len(photos)/3)] for x in range(0, len(photos), 100)]
+    return render_template("photog.html", data=lists)
 
 
 @views.route("/github")
