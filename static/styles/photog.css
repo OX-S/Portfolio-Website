@@ -79,11 +79,19 @@ h1 {
   width: 100%;
   transition: .5s ease;
   opacity:0;
-  color: white;
-  font-size: 20px;
-  padding: 20px;
-  text-align: center;
+  padding: 10px;
 }
 .container:hover .overlay {
   opacity: 1;
+}
+.overlay h2 {
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  text-align: center;
+}
+.overlay span {
+    color: white;
+    font-size: 12;
+    padding: 0px 25px 20px 20px;
 }

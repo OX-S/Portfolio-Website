@@ -21,7 +21,7 @@ class Photo:
         try:
             return exif_data[272].rstrip().lstrip()
         except (TypeError, KeyError) as e:
-            return 'null'
+            return '-'
 
     @staticmethod
     def get_shutter_speed(exif_data):
@@ -31,28 +31,28 @@ class Photo:
                 ss = speed[0] / speed[1]
                 return str(ss)
             else:
-                return f'{speed[0]}/{speed[1]}'
+                return f'{speed[0]}/{speed[1]} s'
         except (TypeError, KeyError) as e:
-            return 'null'
+            return '-'
 
     @staticmethod
     def get_f_stop(exif_data):
         try:
             aperture = exif_data[33437]
-            return str(round(aperture[0] / aperture[1], 1))
+            return f'𝑓{str(round(aperture[0] / aperture[1], 1))}'
         except (TypeError, KeyError) as e:
-            return 'null'
+            return '-'
 
     @staticmethod
     def get_iso(exif_data):
         try:
-            return str(exif_data[34855])
+            return f'ISO {str(exif_data[34855])}'
         except (TypeError, KeyError) as e:
-            return 'null'
+            return '-'
 
     @staticmethod
     def get_focal_length(exif_data):
         try:
             return f'{str(exif_data[37386][0])} mm'
         except (TypeError, KeyError) as e:
-            return 'null'
+            return '-'
