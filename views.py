@@ -80,7 +80,7 @@ def contact():
 
         except FileNotFoundError:
 
-            df = pd.DataFrame([[name, email, message]], columns=['a', 'b', 'c'])
+            df = pd.DataFrame([[name, email, message]])
             df.to_csv('data.csv')
 
         return render_template('contact.html', form=form)
