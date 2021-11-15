@@ -92,7 +92,10 @@ a {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 2em;
+    padding: 0em;
+}
+.contactForm form {
+    width: 70%;
 }
 .contactForm h2 {
     font-size: 30px;
