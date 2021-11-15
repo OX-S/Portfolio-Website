@@ -21,8 +21,12 @@ def landing():
 
 
 @views.route("/home")
-def home():
-    return render_template("home.html")
+def home(my_bool='true'):
+    try:
+        print(request.args.get('my_bool'))
+    except OSError:
+        pass
+    return render_template("home.html", bool=my_bool)
 
 
 @views.route("/photography")
@@ -30,6 +34,7 @@ def photog():
     photos = []
     files = [os.path.join('static/assets/photographs/', f) for f in os.listdir('static/assets/photographs/')
              if os.path.isfile(os.path.join('static/assets/photographs/', f))]
+
     for file in files:
         name = Photo.get_name(file)
         exif = Photo.get_exif(file)
@@ -79,7 +84,6 @@ def contact():
             response.to_csv('data.csv', mode='a', header=False)
 
         except FileNotFoundError:
-
             df = pd.DataFrame([[name, email, message]])
             df.to_csv('data.csv')
 

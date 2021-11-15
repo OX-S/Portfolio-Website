@@ -6,3 +6,12 @@
   padding-top: 5em;
   padding-left: 2em;
 }
+#test {
+    position: fixed;
+    width: 50%;
+    height: 50%;
+    display: fixed;
+    top: 0;
+    left: 0;
+    background-color: red;
+}

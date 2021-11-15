@@ -6,10 +6,16 @@
 {% endblock %}
 {% block content %}
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/home.css')}}">
+    <script type="text/javascript">
+        var myBool = {{ bool }}
+    </script>
     <div class="home">
          <div>
             <h1 id="hi"> print("Hi, I'm Finn") </h1>
         </div>
+        <div id="test">
+        </div>
     </div>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/pageload.js')}}"></script>
 {% endblock %}
 
