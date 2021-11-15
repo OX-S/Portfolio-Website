@@ -7,7 +7,6 @@ from forms import ContactForm
 from photo import *
 from math import floor
 
-
 views = Blueprint(__name__, "views")
 links = [("ArcticDevelopment", "ArcticTools"),
          ("OX-S", "Discord-Custom-Status-Changer"),
@@ -42,7 +41,7 @@ def photog():
         data = (file.replace('static/', ''), name, device, ss, f_stop, iso, focal_length)
         photos.append(data)
 
-    lists = [photos[x:x + floor(len(photos)/3)] for x in range(0, len(photos), floor(len(photos)/3))]
+    lists = [photos[x:x + (floor(len(photos) / 3)) + 1] for x in range(0, len(photos), floor(len(photos) / 3) + 1)]
     return render_template("photog.html", data=lists)
 
 
