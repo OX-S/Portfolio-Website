@@ -20,12 +20,13 @@ def landing():
     return redirect(url_for('views.home'))
 
 
+@views.route("/home_")
+def home_redirect():
+    return home('false')
+
+
 @views.route("/home")
-def home(my_bool='true'):
-    try:
-        print(request.args.get('my_bool'))
-    except OSError:
-        pass
+def home(my_bool='false'):
     return render_template("home.html", bool=my_bool)
 
 

@@ -7,13 +7,13 @@
 //});
 
 $(document).ready(function () {
-    test();
+    animate();
 });
 
 
 var id = null;
-function test() {
-  var elem = document.getElementById("test");
+function animate() {
+  var elem = document.getElementById("bg");
   var pos = 0;
   console.log(myBool)
   if (myBool) {
@@ -30,3 +30,4 @@ function test() {
       }
   }
 }
+
