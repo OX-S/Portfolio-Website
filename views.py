@@ -6,6 +6,7 @@ from flask import Blueprint, render_template, url_for, redirect, request
 from forms import ContactForm
 from photo import *
 from math import floor
+from artwork import *
 
 views = Blueprint(__name__, "views")
 links = [("ArcticDevelopment", "ArcticTools"),
@@ -63,6 +64,15 @@ def github():
 
 @views.route("/artwork")
 def artwork():
+    artworks = []
+
+    files = [f for f in os.listdir('static/assets/artwork/')
+             if os.path.isfile(os.path.join('static/assets/artwork/', f))]
+    for file in files:
+        art_piece = Artwork(file)
+        print(art_piece.get_name())
+        print(art_piece.get_median())
+        print(art_piece.get_path())
     return render_template("artwork.html")
 
 
