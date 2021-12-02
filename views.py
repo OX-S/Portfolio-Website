@@ -73,6 +73,7 @@ def artwork():
         print(art_piece.get_name())
         print(art_piece.get_median())
         print(art_piece.get_path())
+        artworks.append(art_piece.get_list())
     return render_template("artwork.html", data=artworks)
 
 

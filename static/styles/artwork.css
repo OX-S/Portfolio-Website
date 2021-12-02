@@ -8,3 +8,42 @@ h1 {
     margin-bottom: 1em;
     font-size: 60px;
 }
+.column {
+    width: 80%;
+    display: block;
+    margin: auto;
+}
+.container {
+    position: relative;
+    width: 60%;
+}
+
+.art {
+    width: 100%;
+    transition: 5s ease;
+}
+.info {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 80%;
+    width: 80%;
+    z-index: 30;
+    opacity: 50%;
+    background: blue;
+    transition: .5s ease;
+}
+.container:hover {
+    transform: translateX(-50%);
+
+}
+.container:hover .info {
+    background: red;
+    transform: translateX(70px);
+}

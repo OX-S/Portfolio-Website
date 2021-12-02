@@ -15,3 +15,6 @@ class Artwork:
 
     def get_median(self):
         return self.median
+
+    def get_list(self):
+        return [self.get_name(), self.get_path(), self.get_median()]

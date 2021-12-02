@@ -9,9 +9,14 @@
     <div class="artwork">
          <div>
             <h1> My Artwork </h1>
-             <div class="container">
+             <div class="column">
                  {% for item in data %}
-                    <img src="{{ url_for('static', filename=item.get_path())}}">
+                 <div class="container">
+                     <img class="art" src="{{ url_for('static', filename=item[1])}}">
+                     <div class="info">
+                        <h2 class="test">Test words</h2>
+                     </div>
+                 </div>
                  {% endfor %}
              </div>
         </div>
