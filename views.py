@@ -73,7 +73,7 @@ def artwork():
         print(art_piece.get_name())
         print(art_piece.get_median())
         print(art_piece.get_path())
-    return render_template("artwork.html")
+    return render_template("artwork.html", data=artworks)
 
 
 @views.route("/contact", methods=["GET", "POST"])

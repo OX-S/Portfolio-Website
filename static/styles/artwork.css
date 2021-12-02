@@ -1,8 +1,10 @@
 #artwork {
     color: #7f8386;
 }
-#hi {
-  color: #fff;
-  padding-top: 5em;
-  padding-left: 2em;
+h1 {
+    color: #ffffff;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 60px;
 }

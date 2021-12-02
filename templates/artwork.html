@@ -8,7 +8,12 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/artwork.css')}}">
     <div class="artwork">
          <div>
-            <h1 id="hi"> print("Hi, I'm  Not Finn") </h1>
+            <h1> My Artwork </h1>
+             <div class="container">
+                 {% for item in data %}
+                    <img src="{{ url_for('static', filename=item.get_path())}}">
+                 {% endfor %}
+             </div>
         </div>
     </div>
 {% endblock %}
