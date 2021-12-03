@@ -16,6 +16,7 @@ h1 {
 .container {
     position: relative;
     width: 100%;
+    margin-bottom: 120px;
 }
 
 .art {
@@ -37,8 +38,11 @@ h1 {
     height: 80%;
     width: 40%;
     z-index: -1;
-    background: #3a94a5;
+    background: #1b1c1f;
     transition: .5s ease;
+    border-radius: 6px;
+    border-right: 15px solid #3a94a5;
+    padding: 10px 10px 10px 10%;
 }
 .container:hover .art {
     transform: translateX(-30%);
