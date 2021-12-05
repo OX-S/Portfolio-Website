@@ -14,14 +14,15 @@ h1 {
 .float_container {
     padding: 20px;
     margin: auto;
-    width: 70em;
-    height: auto;
+    width: 85vw;
+    height: calc(85vw /2);
+
 }
 .float_child {
     width: 50%;
     padding: 20px;
     float: left;
-    height: 35em;
+    height: 100%;
 }
 #info {
     height: 90%;
@@ -143,4 +144,29 @@ a {
     cursor: pointer;
     padding: 10px;
 
+}
+@media (min-width: 1080px) and (max-width: 1440px) {
+
+.contactForm .inputBox {
+    position: relative;
+    width: 100%;
+    margin-top: 5%;
+
+}
+}
+@media (max-width: 1080px) {
+.float_container {
+    width: 100%;
+}
+
+.float_child {
+    width: 50vh;
+    padding: 20px;
+    height: 50vh;
+    margin: auto;
+    float: none;
+}
+#contact-form {
+    height: 80vh;
+}
 }

@@ -3,7 +3,13 @@
   font-weight: 400;
   src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
 }
-
+@viewport {
+  width: device-width ;
+  zoom: 1.0 ;
+}
+* {
+ margin: 0; padding: 0;
+}
 body {
   background-color: #111214;
   font-family: "San Francisco";
@@ -11,10 +17,9 @@ body {
 }
 
 #header {
-  position: absolute
-  padding-right: 40em;
   background-color: #151618;
-  height: 4em;
+  height: auto;
+  width: 100%;
 }
 
 ul {
