@@ -16,7 +16,7 @@ h1 {
 .container {
     position: relative;
     width: 100%;
-    margin-bottom: 120px;
+    margin-bottom: 10%;
 }
 
 .art {
@@ -50,4 +50,20 @@ h1 {
 }
 .container:hover .info {
     transform: translateX(60%);
+}
+
+@media (max-width: 1080px) and (orientation:portrait) {
+    .art {
+        width: 80%;
+    }
+    .info {
+        width: 60%;
+    }
+    .container:hover .art {
+        transform: translateX(-25%);
+    }
+    .container:hover .info {
+        transform: translateX(50%);
+    }
+
 }
