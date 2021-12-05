@@ -23,12 +23,13 @@ h1 {
   padding: 0 4px;
 }
 
-.column img {
+.container img {
   display: block;
   margin: auto;
   margin-top: 1.5em;
   vertical-align: middle;
-  width: 400px;
+  width: 100%;
+
 }
 
 @media screen and (max-width: 1400px) {
@@ -70,12 +71,13 @@ h1 {
 .container {
     position: relative;
     width: 400px;
+    padding: 0;
 }
 .overlay {
   position: absolute;
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
-  width: 100%;
+  width: 400px;
   transition: .5s ease;
   opacity:0;
   padding: 10px;
