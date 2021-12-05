@@ -154,7 +154,7 @@ a {
 
 }
 }
-@media (max-width: 1080px) {
+@media (max-width: 1080px) and (orientation:portrait) {
 .float_container {
     width: 100%;
 }
@@ -166,7 +166,29 @@ a {
     margin: auto;
     float: none;
 }
+.contactForm form {
+    margin: 20px;
+}
 #contact-form {
-    height: 80vh;
+    height: auto;
+}
+}
+@media (max-width: 1080px) and (orientation:landscape) {
+.float_container {
+    width: 100%;
+}
+
+.float_child {
+    width: 100vh;
+    padding: 20px;
+    height: 100vh;
+    margin: auto;
+    float: none;
+}
+.contactForm form {
+    margin: 30px;
+}
+#contact-form {
+    height: auto;
 }
 }
