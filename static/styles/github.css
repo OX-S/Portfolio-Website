@@ -41,6 +41,7 @@ h1 {
 .desc {
     margin: 0.3em 0;
     height: 55%;
+    overflow: hidden;
 
 }
 .stats span {
@@ -51,4 +52,33 @@ h1 {
 span {
     color: black;
     margin
+}
+
+@media (max-width: 634px) {
+ .title {
+    font-size: 22px;
+    color: #3a94a5;
+    font-weight: 500;
+}
+.stats span {
+    margin-right: 3em;
+    font-weight: 500;
+    font-size: 14px;
+}
+}
+@media (max-width: 475px) {
+ .title {
+    font-size: 16px;
+    color: #3a94a5;
+    font-weight: 500;
+}
+.stats span {
+    margin-right: 3em;
+    font-weight: 500;
+    font-size: 10px;
+}
+.float_child {
+    height: 180px;
+}
+
 }
