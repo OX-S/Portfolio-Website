@@ -1,8 +1,31 @@
 #home {
     color: #7f8386;
 }
-#hi {
+h1 {
   color: #fff;
-  padding-top: 5em;
-  padding-left: 2em;
+  text-align: left;
+  font-size: 125px;
+
+
+}
+.container {
+    border: 3px solid red;
+    height: 500px;
+}
+.image {
+    position: relative;
+    width: 59%;
+    height: 100%;
+    z-index: 100;
+    float: right;
+}
+.image img {
+    width: 100%;
+    height: auto;
+    z-index: 100;
+}
+.name {
+    width: 39%;
+    height: 100%;
+    float: right;
 }

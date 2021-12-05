@@ -8,8 +8,15 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/home.css')}}">
     <div class="home">
          <div>
-            <h1 id="hi"> print("Hi, I'm Finn") </h1>
-             <img src="{{ url_for('static', filename='assets/portrait.png')}}" height="400px" width="auto">
+             <div class="container">
+                 <div class="image">
+                     <img src="{{ url_for('static', filename='assets/portrait.png')}}">
+                 </div>
+                 <div class="name">
+                    <h1> FINN </h1>
+                    <h1>KLIEWER</h1>
+                 </div>
+             </div>
         </div>
     </div>
 {% endblock %}
