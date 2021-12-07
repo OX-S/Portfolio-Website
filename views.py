@@ -5,8 +5,6 @@ from github import Github
 from flask import Blueprint, render_template, url_for, redirect, request, send_file
 from forms import ContactForm
 from config import idek_what_to_call_this_path
-from photo import *
-from math import floor
 from artwork import *
 
 views = Blueprint(__name__, "views")
@@ -29,23 +27,7 @@ def home():
 
 @views.route("/photography")
 def photog():
-    photos = []
-    path = os.path.join(idek_what_to_call_this_path, 'static/assets/photographs/')
-
-    files = [os.path.join(path, f) for f in os.listdir(path)
-             if os.path.isfile(os.path.join(path, f))]
-    for file in files:
-        name = Photo.get_name(file)
-        exif = Photo.get_exif(file)
-        device = Photo.get_device(exif)
-        ss = Photo.get_shutter_speed(exif)
-        f_stop = Photo.get_f_stop(exif)
-        iso = Photo.get_iso(exif)
-        focal_length = Photo.get_focal_length(exif)
-        data = (file.replace(os.path.join(idek_what_to_call_this_path, 'static/'), ''), name, device, ss, f_stop, iso, focal_length)
-        photos.append(data)
-
-    lists = [photos[x:x + (floor(len(photos) / 3)) + 1] for x in range(0, len(photos), floor(len(photos) / 3) + 1)]
+    from app import lists
     return render_template("photog.html", data=lists)
 
 
