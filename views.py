@@ -68,8 +68,8 @@ def github():
 def artwork():
     artworks = []
 
-    files = [f for f in os.listdir('static/assets/artwork/')
-             if os.path.isfile(os.path.join('static/assets/artwork/', f))]
+    files = [f for f in os.listdir(os.path.join(os.getcwd(), 'static/assets/artwork/'))
+             if os.path.isfile(os.path.join(os.path.join(os.getcwd(), 'static/assets/artwork/', f)))]
     for file in files:
         art_piece = Artwork(file)
         print(art_piece.get_name())
