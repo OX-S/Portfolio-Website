@@ -54,3 +54,21 @@
     color: white;
     font-size: 18px;
 }
+.about-me .download-button {
+    text-align: center;
+    background: #3a94a5;
+    display: block;
+    margin: auto;
+    margin-top: 40px;
+    width: 220px;
+    padding: 10px;
+}
+.about-me .download-button a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+.about-me .download-button a:hover {
+    border-bottom: none;
+}
