@@ -30,8 +30,7 @@ def home():
 @views.route("/photography")
 def photog():
     photos = []
-    basepath = os.path.join(os.getcwd(), idek_what_to_call_this_path)
-    path = os.path.join(basepath, 'static/assets/photographs/')
+    path = os.path.join(idek_what_to_call_this_path, 'static/assets/photographs/')
 
     files = [os.path.join(path, f) for f in os.listdir(path)
              if os.path.isfile(os.path.join(path, f))]
@@ -43,7 +42,7 @@ def photog():
         f_stop = Photo.get_f_stop(exif)
         iso = Photo.get_iso(exif)
         focal_length = Photo.get_focal_length(exif)
-        data = (file.replace(os.path.join(basepath, 'static/'), ''), name, device, ss, f_stop, iso, focal_length)
+        data = (file.replace(os.path.join(idek_what_to_call_this_path, 'static/'), ''), name, device, ss, f_stop, iso, focal_length)
         photos.append(data)
 
     lists = [photos[x:x + (floor(len(photos) / 3)) + 1] for x in range(0, len(photos), floor(len(photos) / 3) + 1)]
@@ -69,10 +68,9 @@ def github():
 @views.route("/artwork")
 def artwork():
     artworks = []
-    basepath = os.path.join(os.getcwd(), idek_what_to_call_this_path)
 
-    files = [f for f in os.listdir(os.path.join(basepath, 'static/assets/artwork/'))
-             if os.path.isfile(os.path.join(os.path.join(basepath, 'static/assets/artwork/', f)))]
+    files = [f for f in os.listdir(os.path.join(idek_what_to_call_this_path, 'static/assets/artwork/'))
+             if os.path.isfile(os.path.join(os.path.join(idek_what_to_call_this_path, 'static/assets/artwork/', f)))]
     for file in files:
         art_piece = Artwork(file)
         print(art_piece.get_name())
