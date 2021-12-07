@@ -44,6 +44,9 @@ h1 {
     border-right: 15px solid #3a94a5;
     padding: 10px 10px 10px 10%;
 }
+.info h2 {
+    color: white;
+}
 .container:hover .art {
     transform: translateX(-30%);
 
