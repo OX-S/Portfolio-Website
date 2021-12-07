@@ -29,8 +29,10 @@ def home():
 @views.route("/photography")
 def photog():
     photos = []
-    files = [os.path.join('static/assets/photographs/', f) for f in os.listdir('static/assets/photographs/')
-             if os.path.isfile(os.path.join('static/assets/photographs/', f))]
+    path = os.path.join(os.getcwd(), 'static/assets/photographs/')
+
+    files = [os.path.join(path, f) for f in os.listdir(path)
+             if os.path.isfile(os.path.join(path, f))]
     for file in files:
         name = Photo.get_name(file)
         exif = Photo.get_exif(file)
@@ -39,7 +41,7 @@ def photog():
         f_stop = Photo.get_f_stop(exif)
         iso = Photo.get_iso(exif)
         focal_length = Photo.get_focal_length(exif)
-        data = (file.replace('static/', ''), name, device, ss, f_stop, iso, focal_length)
+        data = (file.replace(os.path.join(os.getcwd(), 'static/'), ''), name, device, ss, f_stop, iso, focal_length)
         photos.append(data)
 
     lists = [photos[x:x + (floor(len(photos) / 3)) + 1] for x in range(0, len(photos), floor(len(photos) / 3) + 1)]
