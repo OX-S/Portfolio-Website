@@ -1,23 +1,19 @@
 #home {
-    color: #7f8386;
+    color: #3a94a5;
 }
-h1 {
-  color: #fff;
-  text-align: left;
-  font-size: 125px;
-
-
-}
-.container {
-    border: 3px solid red;
+.float-container {
+    display: block;
+    position: relative;
     height: 500px;
+    width: 85%;
+    margin: auto;
 }
 .image {
-    position: relative;
+    position: absolute;
     width: 59%;
     height: 100%;
     z-index: 100;
-    float: right;
+    right: 0;
 }
 .image img {
     width: 100%;
@@ -25,7 +21,36 @@ h1 {
     z-index: 100;
 }
 .name {
-    width: 39%;
-    height: 100%;
-    float: right;
+    position: absolute;
+    left: 0;
+    top: 25%;
+}
+.name h2 {
+  margin-top: -20px;
+  color: #fff;
+  text-align: left;
+  font-size: 72px;
+}
+.name h1 {
+  color: #fff;
+  text-align: left;
+  font-size: 100px;
+  font-weight: 700;
+  color: #3a94a5;
+}
+.about-me {
+    position: absolute;
+    left: 5%;
+    top: 87%;
+    width: 35%;
+    margin-left: 15px;
+}
+.about-me h1 {
+    color: #3a94a5;
+    font-size: 45px;
+    font-weight: 700;
+}
+.about-me p {
+    color: white;
+    font-size: 18px;
 }

@@ -97,3 +97,10 @@ def contact():
         return render_template('contact.html', form=form)
     else:
         return render_template('contact.html', form=form)
+
+@views.route("/download")
+def download():
+    download_req_id = request.args.get('download_req_id')
+    path = "/".join([APP_ROOT, "output"])
+    video = path + '/' + download_req_id + '.mp4'
+    return send_file(video, as_attachment=True)
