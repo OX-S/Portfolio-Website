@@ -68,6 +68,7 @@
     color: white;
     text-decoration: none;
     font-weight: 500;
+    margin-bottom: 40px;
 }
 .about-me .download-button a:hover {
     border-bottom: none;
