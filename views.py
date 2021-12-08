@@ -5,7 +5,6 @@ from github import Github
 from flask import Blueprint, render_template, url_for, redirect, request, send_file
 from forms import ContactForm
 from config import idek_what_to_call_this_path
-from artwork import *
 
 views = Blueprint(__name__, "views")
 links = [("ArcticDevelopment", "ArcticTools"),
@@ -27,8 +26,8 @@ def home():
 
 @views.route("/photography")
 def photog():
-    from app import lists
-    return render_template("photog.html", data=lists)
+    from app import photo_lists
+    return render_template("photog.html", data=photo_lists)
 
 
 @views.route("/github")
@@ -49,17 +48,8 @@ def github():
 
 @views.route("/artwork")
 def artwork():
-    artworks = []
-
-    files = [f for f in os.listdir(os.path.join(idek_what_to_call_this_path, 'static/assets/artwork/'))
-             if os.path.isfile(os.path.join(os.path.join(idek_what_to_call_this_path, 'static/assets/artwork/', f)))]
-    for file in files:
-        art_piece = Artwork(file)
-        print(art_piece.get_name())
-        print(art_piece.get_median())
-        print(art_piece.get_path())
-        artworks.append(art_piece.get_list())
-    return render_template("artwork.html", data=artworks)
+    from app import artwork_list
+    return render_template("artwork.html", data=artwork_list)
 
 
 @views.route("/contact", methods=["GET", "POST"])
