@@ -1,10 +1,7 @@
 import pandas as pd
-import os
-
 from github import Github
 from flask import Blueprint, render_template, url_for, redirect, request, send_file
 from forms import ContactForm
-from config import idek_what_to_call_this_path
 
 views = Blueprint(__name__, "views")
 links = [("ArcticDevelopment", "ArcticTools"),
