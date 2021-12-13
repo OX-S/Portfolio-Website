@@ -44,6 +44,7 @@
     top: 87%;
     width: 35%;
     margin-left: 15px;
+    padding-bottom: 40px;
 }
 .about-me h1 {
     color: #3a94a5;
@@ -68,6 +69,7 @@
     color: white;
     text-decoration: none;
     font-weight: 500;
+    margin-bottom: 40px;
 }
 .about-me .download-button a:hover {
     border-bottom: none;
